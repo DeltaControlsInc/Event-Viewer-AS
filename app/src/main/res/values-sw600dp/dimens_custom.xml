@@ -1,0 +1,8 @@
+<!-- Default values for all remaining sizes -->
+<resources>
+ 	<dimen name="button_min_width">150dp</dimen> 
+ 	<dimen name="event_details_icon_size">45dp</dimen>
+ 	
+ 	<dimen name="footer_height">80dp</dimen>
+ 	<dimen name="footer_padding">20dp</dimen>
+</resources> 

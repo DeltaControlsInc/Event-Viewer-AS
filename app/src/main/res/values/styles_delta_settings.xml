@@ -1,0 +1,51 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- https://code.google.com/p/android/issues/detail?id=24922, apply custom spinner list selector -->
+    <!--
+    <style name="spinnerListSelectorFix">
+    	<item name="android:listSelector">@drawable/selector_delta_list_selector</item>
+    </style>
+    -->
+
+    <style name="settingsDefaultTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/SettingsTextColor</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="settingsAppearance">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@drawable/shape_settings_background</item>
+    </style>
+
+    <style name="settingsLabel">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:textAppearance">@style/settingsDefaultTextStyle</item>
+        <item name="android:textColor">@color/DeltaDarkGrey</item>
+        <item name="android:paddingLeft">20dp</item>
+    </style>
+
+    <style name="settingsSubLabel">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textAppearance">@style/settingsDefaultTextStyle</item>
+        <item name="android:textColor">@color/DeltaDarkGrey</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="settingsInput">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:textAppearance">@style/settingsDefaultTextStyle</item>
+        <item name="android:textColor">@color/DeltaDefaultText</item>
+    </style>
+   
+    <style name="settingsInputSpinner">
+        <item name="android:spinnerMode">dropdown</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:textAppearance">@style/settingsDefaultTextStyle</item>
+        <item name="android:textColor">@color/DeltaDefaultText</item>
+    </style>
+
+</resources>

@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SettingsActivity" >
+
+    <ScrollView
+        android:id="@+id/settings_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <include
+                android:layout_height="wrap_content"
+               	android:layout_width="0dp" 
+               	android:layout_weight="1"
+                android:layout_margin="@dimen/padding_xlarge"
+                layout="@layout/view_login_inputs" />
+
+            <include
+                android:layout_height="wrap_content"
+                android:layout_width="0dp" 
+                android:layout_margin="@dimen/padding_xlarge"
+                android:layout_weight="1"
+                layout="@layout/view_settings_inputs" />
+            
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_footer" />
+
+</LinearLayout>

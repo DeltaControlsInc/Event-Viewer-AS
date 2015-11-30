@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.deltacontrols.eventviewer"
+    android:versionCode="1"
+    android:versionName="1.04.003" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name="com.deltacontrols.eventviewer.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+            android:name="com.deltacontrols.eventviewer.LauncherActivity"
+            android:label="@string/app_name"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.deltacontrols.eventviewer.SettingsActivity" 
+            android:launchMode="singleTask" >
+        </activity>
+        
+        <activity
+            android:name="com.deltacontrols.eventviewer.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+        </activity>
+
+        <service
+            android:name="com.deltacontrols.eventviewer.service.EventNotificationsService"
+            android:icon="@drawable/ic_launcher"
+            android:label="DeltaEventNotificationsService" >
+        </service>
+
+        <!-- Auto start service when device boots up -->
+        <receiver android:name="com.deltacontrols.eventviewer.service.ScheduleEventNotificationsBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

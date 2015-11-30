@@ -1,0 +1,4 @@
+<resources>
+    <!-- App values -->
+    <dimen name="setting_input_size">200dp</dimen>
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- General -->
+    <string name="app_name">Event Viewer</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="no_notifications">No notifications</string>
+
+    <!-- Server Status Messages -->
+    <string name="serverstatus_waiting_for_response">Waiting for response from server, please wait</string>
+    <string name="serverstatus_demo_mode">Demo</string>
+    <string name="serverstatus_last_success_at_X">Last success at %s</string>
+    <string name="serverstatus_connected_to_service">Connected to service</string>
+    <string name="serverstatus_invalid_login_credentials">Invalid login credentials</string>
+    <string name="serverstatus_problems_communicating_with_server">Problems communicating with server.</string>
+    <string name="serverstatus_not_connected">Service is not connected. Please re-login</string>
+  
+    <!-- Feedback messages -->
+    <string name="paused">Paused</string>
+    <string name="unpaused">Unpaused</string>
+    <string name="failed_to_sync_with_service">Failed to sync with service</string>
+    <string name="x_new_event">%d New Event</string>
+    <string name="x_new_events">%d New Events</string>
+    <string name="transition_acknowledged">Transition Acknowledged</string>
+    <string name="error_acknowledging_event">Error acknowledging event</string>
+    <string name="error_retrieving_event_details">Error retrieving event details</string>
+    <string name="error_saving_event_details">Error saving event details: </string>
+    <string name="could_not_parse_filter" >Could not parse filter JSON</string>
+    <string name="alarm_detail_saved">"Event detail saved"</string>
+    
+    <!-- Menu Items -->
+    <string name="action_settings">Settings</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_dismiss_all">Dismiss All</string>
+    <string name="action_auto_refresh">Auto Refresh</string>
+    <string name="action_filter">Filter</string>
+    <string name="action_log_out">Log Out</string>
+    <string name="action_mark_all_as_read">Mark all as Read</string>
+    <string name="action_mark_all_as_unread">Mark all as Unread</string>
+
+    <!-- Login/Settings Activity -->
+    <string name="login_activity_user_hint">username</string>
+    <string name="login_activity_password_hint">password</string>
+    <string name="login_activity_enteliweb_hint">enteliWEB URL</string>
+    <string name="login_activity_refresh_time">Refresh</string>
+    <string name="login_activity_failed_to_login">Failed to login</string>
+    <string name="login_activity_problem_saving_settings">Problem saving settings</string>
+    <string name="login_activity_server_invalid_apps_license">Server does not have valid Apps license</string>
+    <string name="login">Log In</string>
+
+	<!-- Refesh Time dropdown text -->
+    <string-array name="refresh_time_array_text">
+        <item>10 seconds</item>
+        <item>30 seconds</item>
+        <item>1 minute</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+    </string-array>
+    
+    <!-- Refesh Time dropdown values -->
+    <string-array name="refresh_time_array_values">
+        <item>10</item>
+        <item>30</item>
+        <item>60</item>
+        <item>300</item>
+        <item>600</item>
+        <item>1800</item>
+        <item>3600</item>
+    </string-array>
+    
+    <!-- Event Details -->
+    <string name="eventdetail_event_ref">Event Ref</string>
+    <string name="eventdetail_input_ref">Input Ref</string>
+    <string name="eventdetail_input_name">Input Name</string>
+    <string name="eventdetail_alarm_group">Alarm Group</string>
+    <string name="eventdetail_alarm_priority">Alarm Priority</string>
+    <string name="eventdetail_raw_timestamp">Raw timestamp</string>
+    <string name="eventdetail_from_state">From State</string>
+    <string name="eventdetail_to_state">To State</string>
+    <string name="assign_to_prompt">Assign To&#8230;</string>
+    <string name="input">Input</string>
+    <string name="event">Event</string>
+    <string name="event_name">Event Name</string>
+    <string name="input_name">Input Name</string>
+    <string name="add_ack_msg_hint">Add acknowledge message</string>
+    <string name="acknowledge"> Acknowledge </string>
+    <string name="assign_to">Assign To:</string>
+    <string name="add_alarm_note">Add alarm note</string>
+    <string name="cancel"> Cancel </string>
+    <string name="save"> Save </string>
+    <string name="error_launching_eweb_link">Trouble opening enteliWEB link; please open in native browser directly</string>
+
+    <string-array name="fake_event_assign_to">
+        <item>admin</item>
+        <item>mobile</item>
+    </string-array>
+    
+    <!-- Filters -->
+    <string name="group_name_all">&lt;All&gt;</string>
+    <string name="filter_alarm_group">Alarm Group</string>
+    <string name="filter_event_input_name">Event or Input Name</string>
+    <string name="filter_filter_on_text">Search</string>
+    <string name="filter_filter_on_text_hint">Object name or message</string>
+    
+    <!-- EventNotificationService System Notification Messages -->
+    <string name="notification_event_viewer_failed_to_update">Event Viewer failed to update</string>
+    <string name="notification_invalid_eweb_login">Invalid eWEB login credentials</string>
+    <string name="notification_network_connection_issue">Could not contact the server, please check your network connection</string>
+    <string name="notification_error_getting_events">Error getting events, events may not be up to date</string>
+    <string name="notification_touch_to_view">Touch to view</string>
+    
+</resources>

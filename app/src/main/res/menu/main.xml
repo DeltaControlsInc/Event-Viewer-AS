@@ -1,0 +1,53 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:delta="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_action_refresh"
+        android:showAsAction="always"
+        android:title="@string/action_refresh"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_auto_refresh"
+        android:icon="@drawable/ic_action_pause"
+        android:showAsAction="always"
+        android:title="@string/action_auto_refresh"
+        android:visible="true"/>
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@drawable/ic_action_filter"
+        android:showAsAction="always"
+        android:title="@string/action_filter"
+        android:visible="true"/>
+    <item
+        android:id="@+id/action_read_all"
+        android:icon="@drawable/ic_action_settings"
+        android:showAsAction="never"
+        android:title="@string/action_mark_all_as_read"
+        android:visible="true"/>
+    <item
+        android:id="@+id/action_unread_all"
+        android:icon="@drawable/ic_action_settings"
+        android:showAsAction="never"
+        android:title="@string/action_mark_all_as_unread"
+        android:visible="true"/>
+    <item
+        android:id="@+id/action_dismiss_all"
+        android:icon="@drawable/ic_action_settings"
+        android:showAsAction="never"
+        android:title="@string/action_dismiss_all"
+        android:visible="true"/>
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_action_settings"
+        android:showAsAction="never"
+        android:title="@string/action_settings"
+        android:visible="true"/>
+    <item
+        android:id="@+id/action_log_out"
+        android:icon="@drawable/ic_action_settings"
+        android:showAsAction="never"
+        android:title="@string/action_log_out"
+        android:visible="true"/>
+
+</menu>

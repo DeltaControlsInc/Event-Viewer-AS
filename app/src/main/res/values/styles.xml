@@ -1,0 +1,72 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:textSelectHandle">@drawable/delta_text_select_handle_middle</item>
+        <item name="android:textSelectHandleLeft">@drawable/delta_text_select_handle_left</item>
+        <item name="android:textSelectHandleRight">@drawable/delta_text_select_handle_right</item>
+    </style>
+
+    <!-- Login Page -->
+    <style name="delta_loginInputText">
+        <item name="android:textColor">@color/selector_input_text_color</item>
+        <item name="android:textColorHint">@color/DeltaMidLightGrey</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/selector_delta_edit_text_background</item>
+    </style>
+
+    <style name="delta_button">
+        <item name="android:background">@drawable/button_shape</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="delta_settings_text">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <!-- Event Details -->
+    <style name="delta_event_detail_label">
+        <item name="android:textColor">@color/DeltaMidGrey</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="delta_event_detail_value">
+        <item name="android:textColor">@color/DeltaDarkGrey</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+    
+    <style name="delta_event_detail_link_label">
+        <item name="android:textColor">@color/DeltaMidGrey</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="delta_event_detail_link_value">
+        <item name="android:textColor">@color/DeltaDarkGrey</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+
+</resources>

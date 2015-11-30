@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/shape_event_item_background"
+        android:orientation="horizontal"
+        android:padding="0dp" >
+
+        <RelativeLayout
+            android:id="@+id/visualEventInfo"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="4dp" >
+
+            <RelativeLayout
+                android:id="@+id/categoryColorLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/shape_event_category_color_background" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp" >
+
+            <LinearLayout
+                android:id="@+id/eventHeader"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/eventName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/event_name"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/inputName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/eventName"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/input_name"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/eventTimestamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eventMessageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eventHeader"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/toStateIcon"
+                    android:layout_width="@dimen/event_details_icon_size"
+                    android:layout_height="@dimen/event_details_icon_size"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_state_normal" />
+
+                <TextView
+                    android:id="@+id/eventMessage"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="bottom"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eventDetailsLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eventMessageLayout"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/event_details_icon_size"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eventDetailsLayout"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical" >
+
+                <requestFocus />
+
+                <RelativeLayout
+                    android:id="@+id/ackLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/ackStateIcon"
+                        android:layout_width="@dimen/event_details_icon_size"
+                        android:layout_height="@dimen/event_details_icon_size"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_state_ack_req" />
+
+                    <EditText
+                        android:id="@+id/ackMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/ackStateIcon"
+                        android:background="@drawable/shape_notes_background"
+                        android:gravity="top"
+                        android:hint="@string/add_ack_msg_hint"
+                        android:maxLines="3"
+                        android:minLines="3"
+                        android:padding="5dp"
+                        android:text="" />
+
+                    <Button
+                        android:id="@+id/dialogButtonACK"
+                        style="@style/delta_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/ackMessage"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/acknowledge" />
+                </RelativeLayout>
+
+                <!-- Action Labels -->
+
+                <LinearLayout
+                    android:id="@+id/assignToLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/event_details_icon_size"
+                    android:layout_marginTop="10dp"
+                    android:enabled="false"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/eventAssignToLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/assign_to"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Spinner
+                        android:id="@+id/eventAssignTo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/fake_event_assign_to"
+                        android:prompt="@string/assign_to_prompt"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </LinearLayout>
+
+                <!-- Action Inputs -->
+
+                <LinearLayout
+                    android:id="@+id/eventNotesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:enabled="false"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/notesIcon"
+                        android:layout_width="@dimen/event_details_icon_size"
+                        android:layout_height="@dimen/event_details_icon_size"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_pencil" />
+
+                    <EditText
+                        android:id="@+id/eventNotes"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_notes_background"
+                        android:gravity="top"
+                        android:hint="@string/add_alarm_note"
+                        android:maxLines="3"
+                        android:minLines="3"
+                        android:padding="5dp"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="right" >
+
+                    <Button
+                        android:id="@+id/dialogButtonClose"
+                        style="@style/delta_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/cancel" />
+
+                    <Button
+                        android:id="@+id/dialogButtonSave"
+                        style="@style/delta_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:enabled="false"
+                        android:text="@string/save" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Hidden id, allows us to lookup alarm based on row select -->
+
+        <TextView
+            android:id="@+id/statlist_statid"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_event_item_background"
+    android:minHeight="100dp"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/visualEventInfo"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <RelativeLayout
+            android:id="@+id/categoryColorLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="@drawable/shape_event_category_color_background" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/eventStateIcons"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/toStateIcon"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_event_icon_background"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_state_normal" />
+
+        <ImageView
+            android:id="@+id/ackStateIcon"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_event_icon_background"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_state_ack_req" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="10" >
+
+        <LinearLayout
+            android:id="@+id/eventHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/eventName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/inputName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/eventName"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/eventTimestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/eventMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eventHeader"
+            android:layout_margin="5dp"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLines="2"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- Add extra layout hook for detailed layout -->
+
+        <com.deltacontrols.eventviewer.Triangle
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@id/eventMessage"
+            android:layout_alignParentRight="true" />
+
+        <RelativeLayout
+            android:id="@+id/detailsLayoutHook"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eventMessage" >
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- Hidden id, allows us to lookup alarm based on row select -->
+
+    <TextView
+        android:id="@+id/statlist_statid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

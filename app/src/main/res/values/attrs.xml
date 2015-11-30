@@ -1,0 +1,8 @@
+<resources>
+
+    <declare-styleable name="EventDetailView">
+        <attr name="label" format="string" />
+        <attr name="value" format="string" />
+    </declare-styleable>
+    
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<color name="lightestGrey">#e8e8e9</color>
+	<color name="warmWhite">#f0ede5</color>
+	<color name="transparent">#00000000</color>
+	
+	<color name="defaultCategoryColor">#e8e8e9</color>
+
+</resources>

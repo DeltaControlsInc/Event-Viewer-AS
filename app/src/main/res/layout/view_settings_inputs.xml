@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:padding="20dp" >
+
+    <!-- 2 columns -->
+    <LinearLayout
+        android:id="@+id/tableRow1"
+        style="@style/settingsAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+
+        <TextView
+            style="@style/settingsLabel"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/action_refresh"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+
+        <Spinner
+            android:id="@+id/refreshTimeSpinner"
+            style="@style/settingsInputSpinner"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:entries="@array/refresh_time_array_text"/>
+
+    </LinearLayout>
+
+</TableLayout>

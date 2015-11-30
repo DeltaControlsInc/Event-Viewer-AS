@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DeltaDarkGrey" >
+
+    <!-- Main View -->
+    <!-- android:animateLayoutChanges="true" causing lags -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity" >
+
+        <!-- Status Bar -->
+
+        <LinearLayout
+            android:id="@+id/statusBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/statusEwebConnection"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_question" />
+
+            <TextView
+                android:id="@+id/statusMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/DeltaOffWhite" />
+
+        </LinearLayout>
+
+        <!-- Filters -->
+
+        <include
+            android:id="@+id/eventListFilters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/view_filters"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/DeltaBrightRed" />
+        
+        <com.deltacontrols.eventviewer.MoreIndicator
+            android:id="@+id/eventListFauxHeader"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/eventListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:divider="@color/DeltaZebra2"
+            android:dividerHeight="1dp"
+            android:padding="0dp" />
+
+        <RelativeLayout
+            android:id="@+id/eventListView_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_notifications"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/DeltaOffWhite" />
+        </RelativeLayout>
+
+        <com.deltacontrols.eventviewer.MoreIndicator
+            android:id="@+id/eventListFauxFooter"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/DeltaBrightRed" />
+
+    </LinearLayout>
+
+</RelativeLayout>
